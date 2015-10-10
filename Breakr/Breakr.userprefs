@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/paddleController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/musicPlayer.cs" Line="10" Column="89" />
+      <File FileName="Assets/Scripts/loseCollider.cs" Line="14" Column="57" />
+      <File FileName="Assets/Scripts/levelController.cs" Line="35" Column="73" />
+      <File FileName="Assets/Scripts/paddleController.cs" Line="33" Column="34" />
+      <File FileName="Assets/Scripts/ballController.cs" Line="35" Column="57" />
+      <File FileName="Assets/Scripts/Block.cs" Line="23" Column="67" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
