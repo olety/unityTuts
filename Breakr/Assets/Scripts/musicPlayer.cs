@@ -7,7 +7,7 @@ public class musicPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-//		If we have'nt musicplayer before, create a musicPlayer and assign the instance to it. otherwise, destroy this
+//		If we haven't had a music player before, create a musicPlayer and assign the instance to it. otherwise, destroy this
 		if (musicPlayer.instance != null) {
 			Debug.Log ("Destroying duplicate musicPlayer");
 			Destroy (gameObject);
