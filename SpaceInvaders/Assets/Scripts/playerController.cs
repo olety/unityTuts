@@ -11,13 +11,25 @@ public class playerController : MonoBehaviour {
 	public float projectileFireDelay;
 	public float projectileOffset;
 	public float Health;
+	public AudioClip deathSound;
+	public AudioClip hitSound;
+	public AudioClip fireSound;
 	private Vector2 min, max;
+	private scoreKeeper scorekp;
 
 	private void Hit( float damage ){
-		Health -= damage;;
+		AudioSource.PlayClipAtPoint (hitSound, this.transform.position);
+		Health -= damage;
+		scorekp.setHealth (Health);
 		if (Health <= 0) {
-			Destroy (this.gameObject,0.000001f);
+			Die ();
 		}
+	}
+
+	void Die(){
+		AudioSource.PlayClipAtPoint (deathSound, this.transform.position);
+		GameObject.Find ("levelController").GetComponent<levelController> ().loadScene("Lose");
+		Destroy (this.gameObject,0.000001f);
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
@@ -30,6 +42,7 @@ public class playerController : MonoBehaviour {
 	}
 
 	void Start () {
+		scorekp = GameObject.Find ("ScoreKeeper").GetComponent<scoreKeeper> ();
 		float distance = this.transform.position.z - Camera.main.transform.position.z;
 		Vector3 leftCam = Camera.main.ViewportToWorldPoint (new Vector3(0,0,distance));
 		Vector3 rightCam = Camera.main.ViewportToWorldPoint (new Vector3(1,1,distance));
@@ -39,6 +52,7 @@ public class playerController : MonoBehaviour {
 
 	void Fire(){
 //		Debug.Log("Shots fired1");
+		AudioSource.PlayClipAtPoint (fireSound, this.transform.position);
 		GameObject laser = Instantiate(projectile, 
 		                               new Vector3(this.transform.position.x, this.transform.position.y+projectileOffset), 
 		                               Quaternion.identity) as GameObject;

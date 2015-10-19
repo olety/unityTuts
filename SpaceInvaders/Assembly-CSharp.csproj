@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\musicPlayer.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />
      <Compile Include="Assets\Scripts\projectileController.cs" />
+     <Compile Include="Assets\Scripts\scoreKeeper.cs" />
+     <Compile Include="Assets\Scripts\showScore.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity4/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.8/Standalone/UnityEngine.UI.dll</HintPath>
  </Reference>
